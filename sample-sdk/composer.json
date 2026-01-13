@@ -1,0 +1,27 @@
+{
+  "name": "yadwad/sample-php-sdk",
+  "description": "Sample PHP SDK for interacting with Sample API",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yadwad",
+      "email": "yadwad@example.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "YourCompany\\SampleSDK\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "YourCompany\\SampleSDK\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable"
+}
