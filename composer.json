@@ -15,12 +15,12 @@
   },
   "autoload": {
     "psr-4": {
-      "YourCompany\\SampleSDK\\": "src/"
+      "yadwad\\SampleSDK\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "YourCompany\\SampleSDK\\Tests\\": "tests/"
+      "yadwad\\SampleSDK\\Tests\\": "tests/"
     }
   },
   "minimum-stability": "stable"

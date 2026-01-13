@@ -1,8 +1,9 @@
 <?php
 
-namespace YourCompany\SampleSDK\Utils;
+namespace yadwad\SampleSDK\Utils;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\RequestException;
 
 class HttpClient
 {
@@ -11,20 +12,29 @@ class HttpClient
     public function __construct(string $apiKey, string $baseUrl)
     {
         $this->client = new Client([
-            'base_uri' => $baseUrl,
+            'base_uri' => rtrim($baseUrl, '/'),
             'headers' => [
                 'Authorization' => "Bearer {$apiKey}",
-                'Content-Type' => 'application/json'
-            ]
+                'Accept'        => 'application/json',
+            ],
+            'timeout' => 30
         ]);
     }
 
-    public function post(string $uri, array $data)
+    public function get(string $uri, array $query = [])
     {
-        $response = $this->client->post($uri, [
-            'json' => $data
-        ]);
+        try {
+            $response = $this->client->get($uri, [
+                'query' => $query
+            ]);
 
-        return json_decode($response->getBody(), true);
+            return json_decode($response->getBody()->getContents(), true);
+        } catch (RequestException $e) {
+            throw new \Exception(
+                $e->getResponse()
+                    ? $e->getResponse()->getBody()->getContents()
+                    : $e->getMessage()
+            );
+        }
     }
 }

@@ -1,8 +1,9 @@
 <?php
 
-namespace YourCompany\SampleSDK;
+namespace yadwad\SampleSDK;
 
-use YourCompany\SampleSDK\Utils\HttpClient;
+use yadwad\SampleSDK\Utils\HttpClient;
+use yadwad\SampleSDK\Resources\User;
 
 class Client
 {
@@ -13,8 +14,8 @@ class Client
         $this->http = new HttpClient($apiKey, $baseUrl);
     }
 
-    public function payments()
+    public function users(): User
     {
-        return new Resources\Payment($this->http);
+        return new User($this->http);
     }
 }

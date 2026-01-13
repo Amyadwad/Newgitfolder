@@ -1,6 +1,6 @@
 <?php
 
-namespace YourCompany\SampleSDK\Exceptions;
+namespace yadwad\SampleSDK\Exceptions;
 
 use Exception;
 
