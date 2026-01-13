@@ -1,8 +1,8 @@
 <?php
 
-namespace yadwad\SampleSDK\Resources;
+namespace Yadwad\SampleSDK\Resources;
 
-use yadwad\SampleSDK\Utils\HttpClient;
+use Yadwad\SampleSDK\Utils\HttpClient;
 
 class Payment
 {

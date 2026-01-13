@@ -1,9 +1,9 @@
 <?php
 
-namespace yadwad\SampleSDK;
+namespace Yadwad\SampleSDK;
 
-use yadwad\SampleSDK\Utils\HttpClient;
-use yadwad\SampleSDK\Resources\User;
+use Yadwad\SampleSDK\Utils\HttpClient;
+use Yadwad\SampleSDK\Resources\User;
 
 class Client
 {

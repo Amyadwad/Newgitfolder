@@ -1,6 +1,6 @@
 <?php
 
-namespace yadwad\SampleSDK\Utils;
+namespace Yadwad\SampleSDK\Utils;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
